@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using Xunit;
 using LibConta;
 using static LibConta.Helpers;
@@ -24,7 +24,7 @@ namespace SalariosTest
 
             Assert.Equal(1, s.MesesAntig);
 
-            Assert.Equal(2, s.DiasAntig);
+            Assert.Equal(29, s.DiasAntig);
 
         }
 
@@ -41,8 +41,8 @@ namespace SalariosTest
 
             var db = new TestDB();
             db.Empleados.Add(empleado1);
-            
-            System.Diagnostics.Debug.Print(db.Log);
+
+            // Si el log contiene algo, no debe porqué estar vacío.
             Assert.False(string.IsNullOrWhiteSpace(db.Log));
         }
     }
